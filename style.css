@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --bg-color: #262626;
+  --border-color: #444444;
+  --font-color: #ffffff;
+  --primary-color: #06402b;
+  --error-color: #cf6679;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  position: relative;
+  place-content: center;
+  background-color: var(--bg-color);
+  margin: 0;
+  height: 100vh;
+}
+
+h1,
+h2 {
+  color: var(--font-color);
+  text-align: center;
+}
+
+#gameBoard {
+  background-color: #444444;
+  display: grid;
+  grid-template-columns: 6rem 6rem 6rem;
+  grid-template-rows: 6rem 6rem 6rem;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 19rem;
+  border: 0.125rem solid var(--border-color);
+  border-radius: 0.625rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+#gameBoard span {
+  background-color: var(--bg-color);
+  display: grid;
+  place-content: center;
+  font-size: 4rem;
+  color: var(--font-color);
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+
+#gameBoard span.win {
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: 0.5s;
+}
+
+#gameBoard span:hover {
+  background-color: #e1e1e1;
+  transform: scale(1.05);
+}
+
+#start {
+  position: relative;
+  margin-top: 1.5rem;
+  padding: 0.65rem;
+  font-size: 1rem;
+  color: var(--font-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 50%;
+  margin-left: 5rem;
+}
+
+#start:hover {
+  transform: scale(1.05);
+}
+
+label {
+  font-weight: bold;
+  margin-right: 0.31rem;
+}
+
+input[type="text"] {
+  padding: 0.31rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+  margin-bottom: 0.625rem;
+  font-size: 1rem;
+  display: inline-block;
+  width: 87%;
+}
+
+#player1,
+#player2 {
+  margin-right: 0.625rem;
+}
+
+#themeSwitcher {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  background-color: var(--bg-color);
+  border: 0.125rem solid var(--font-color);
+  color: var(--font-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  font-weight: 700;
+  transition: 0.5s;
+}
+
+#themeSwitcher:hover {
+  background-color: var(--font-color);
+  color: var(--bg-color);
+}
